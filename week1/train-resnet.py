@@ -91,14 +91,14 @@ def main():
     # ssl._create_default_https_context = ssl._create_unverified_context
 
     train_loader = DataLoader(datasets.CIFAR10(
-        root='./data',
+        root='../data',
         train=True,
         download=True,
         transform=transform
     ), batch_size=config.batch_size, shuffle=True, **kwargs)
 
     val_loader = DataLoader(datasets.CIFAR10(
-        root='./data',
+        root='../data',
         train=False,
         download=True,
         transform=transform
